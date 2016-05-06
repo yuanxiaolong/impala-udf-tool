@@ -13,7 +13,9 @@ The samples will get built to build/. This contains test executables that you ca
 build/udf-urltool.ll
 
 create function urldecode (string) returns string location 'hdfs://hadoop/share/udf-urltool.ll' symbol='UrlDecoder';
+
 create function urlencode (string) returns string location 'hdfs://hadoop/share/udf-urltool.ll' symbol='UrlEncoder';
 
 select urldecode('http%3A%2F%2Fwww.mafengwo.cn%2Fentry.php%2Fdaka_list%2Findex');
+
 select urlencode('http://www.mafengwo.cn/entry.php/daka_list/index');
